@@ -1,0 +1,48 @@
+PODS:
+  - Differentiator (4.0.1)
+  - JXPhotoBrowser (3.1.2)
+  - MJRefresh (3.4.3)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - SwiftLint (0.39.2)
+
+DEPENDENCIES:
+  - JXPhotoBrowser
+  - MJRefresh
+  - RxCocoa
+  - RxDataSources
+  - RxSwift
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - Differentiator
+    - JXPhotoBrowser
+    - MJRefresh
+    - RxCocoa
+    - RxDataSources
+    - RxRelay
+    - RxSwift
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  JXPhotoBrowser: 7f0bc11f02fbc84ae06829f922f32ce822aa9661
+  MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
+
+PODFILE CHECKSUM: 5c66863408cc83a7469e93b1aa4d2014a8e3aca1
+
+COCOAPODS: 1.9.1
