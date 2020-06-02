@@ -18,7 +18,7 @@ import RxDataSources
  *
  */
 
-protocol XTRecommendViemModelInputs {
+protocol XTRecommendViemModelInputs: Refreshable {
 
   /// 加载数据
   /// - Parameter isRefreshing: 是否为刷新,**true**就加入到头部,**false**加入尾部
@@ -100,21 +100,7 @@ class XTRecommendViemModel: XTRecommendViemModelType, XTRecommendViemModelInputs
   //private lazy var recommendProvider = { MoyaProvider<JueJinGraphqlAPI>() }()
 }
 
-extension XTRecommendViemModel: Refreshable {}
-
-extension XTRecommendViemModel {
-  struct Input {
-    /// 加载新数据
-    let loadNewAction: Driver<Void>
-    /// 加载过去的数据
-    let loadOldAction: Driver<Void>
-  }
-
-  struct Output {
-    let dataSource: Driver<[SectionModel<String, UserActivity>]>
-    let endRefreshing: Driver<RefreshStatus>
-  }
-}
+//extension XTRecommendViemModel: Refreshable {}
 
 // MARK: 真实网路请求
 private extension XTRecommendViemModel {
