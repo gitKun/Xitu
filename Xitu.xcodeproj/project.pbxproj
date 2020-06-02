@@ -23,6 +23,7 @@
 		A14618522485307A001F25CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A14618512485307A001F25CB /* Assets.xcassets */; };
 		A14618552485307A001F25CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14618532485307A001F25CB /* LaunchScreen.storyboard */; };
 		A146185F24853BB9001F25CB /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A146185E24853BB9001F25CB /* Fonts.swift */; };
+		A1BBA04D2485DFED00C3AC56 /* XTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BBA04C2485DFED00C3AC56 /* XTCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		A14618542485307A001F25CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A14618562485307A001F25CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A146185E24853BB9001F25CB /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		A1BBA04C2485DFED00C3AC56 /* XTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XTCell.swift; sourceTree = "<group>"; };
 		C325007EEE65D4E6A1247AB0 /* Pods-Xitu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xitu.release.xcconfig"; path = "Target Support Files/Pods-Xitu/Pods-Xitu.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,8 +153,9 @@
 				A14618512485307A001F25CB /* Assets.xcassets */,
 				A146184E24853078001F25CB /* Main.storyboard */,
 				A146184C24853078001F25CB /* ViewController.swift */,
-				A1212D7B248556B0000E9453 /* Models */,
 				A1212D7A248556A1000E9453 /* ViewModels */,
+				A1BBA04B2485D96F00C3AC56 /* Views */,
+				A1212D7B248556B0000E9453 /* Models */,
 				A1212D75248555E1000E9453 /* CustomViews */,
 				A1212D5F24854E96000E9453 /* LocalSource */,
 			);
@@ -176,6 +179,14 @@
 			path = Styles;
 			sourceTree = "<group>";
 		};
+		A1BBA04B2485D96F00C3AC56 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A1BBA04C2485DFED00C3AC56 /* XTCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,6 +199,7 @@
 				A146184224853078001F25CB /* Frameworks */,
 				A146184324853078001F25CB /* Resources */,
 				F6C3DB3FFBF4D46609767F4F /* [CP] Embed Pods Frameworks */,
+				A1BBA04E2485E3A200C3AC56 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -272,6 +284,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A1BBA04E2485E3A200C3AC56 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		F6C3DB3FFBF4D46609767F4F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,6 +330,7 @@
 				A146184D24853078001F25CB /* ViewController.swift in Sources */,
 				A1212D7224855376000E9453 /* UIView+CornerPath.swift in Sources */,
 				A146185F24853BB9001F25CB /* Fonts.swift in Sources */,
+				A1BBA04D2485DFED00C3AC56 /* XTCell.swift in Sources */,
 				A146184924853078001F25CB /* AppDelegate.swift in Sources */,
 				A1212D772485563E000E9453 /* CornerBorderButton.swift in Sources */,
 				A1212D702485534C000E9453 /* CGRect+Ext.swift in Sources */,
