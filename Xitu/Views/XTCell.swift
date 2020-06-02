@@ -33,6 +33,10 @@ class XTCell: UITableViewCell {
 
   override func awakeFromNib() {
     super.awakeFromNib()
+    flowButton.borderColor = .xtFlowBtn
+    flowButton.cornerRaius = 4
+    flowButton.borderWidth = 1
+    flowButton.setTitleColor(.xtFlowBtn, for: .normal)
     selectionStyle = .none
   }
 }
