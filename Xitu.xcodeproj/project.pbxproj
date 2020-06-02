@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		0BFC2B992E067EFD34EBD51A /* Pods_Xitu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 765C58A615681CCC50F9B9EC /* Pods_Xitu.framework */; };
 		A1212D6124854ECF000E9453 /* local.json in Resources */ = {isa = PBXBuildFile; fileRef = A1212D6024854ECF000E9453 /* local.json */; };
-		A1212D6324854ED5000E9453 /* avatars in Resources */ = {isa = PBXBuildFile; fileRef = A1212D6224854ED5000E9453 /* avatars */; };
-		A1212D6524854EDA000E9453 /* low_images in Resources */ = {isa = PBXBuildFile; fileRef = A1212D6424854EDA000E9453 /* low_images */; };
-		A1212D6724854EE1000E9453 /* height_images in Resources */ = {isa = PBXBuildFile; fileRef = A1212D6624854EE1000E9453 /* height_images */; };
 		A1212D6E24855237000E9453 /* MJRefresh+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1212D6D24855237000E9453 /* MJRefresh+Rx.swift */; };
 		A1212D702485534C000E9453 /* CGRect+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1212D6F2485534C000E9453 /* CGRect+Ext.swift */; };
 		A1212D7224855376000E9453 /* UIView+CornerPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1212D7124855376000E9453 /* UIView+CornerPath.swift */; };
@@ -24,15 +21,14 @@
 		A14618552485307A001F25CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14618532485307A001F25CB /* LaunchScreen.storyboard */; };
 		A146185F24853BB9001F25CB /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A146185E24853BB9001F25CB /* Fonts.swift */; };
 		A1BBA04D2485DFED00C3AC56 /* XTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BBA04C2485DFED00C3AC56 /* XTCell.swift */; };
+		A1BBA0502485E80E00C3AC56 /* UserActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BBA04F2485E80E00C3AC56 /* UserActivityModel.swift */; };
+		A1BBA0522485E9C900C3AC56 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BBA0512485E9C900C3AC56 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4B82ABBEEFE3E1CED94393EE /* Pods-Xitu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xitu.debug.xcconfig"; path = "Target Support Files/Pods-Xitu/Pods-Xitu.debug.xcconfig"; sourceTree = "<group>"; };
 		765C58A615681CCC50F9B9EC /* Pods_Xitu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xitu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1212D6024854ECF000E9453 /* local.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = local.json; sourceTree = "<group>"; };
-		A1212D6224854ED5000E9453 /* avatars */ = {isa = PBXFileReference; lastKnownFileType = folder; path = avatars; sourceTree = "<group>"; };
-		A1212D6424854EDA000E9453 /* low_images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = low_images; sourceTree = "<group>"; };
-		A1212D6624854EE1000E9453 /* height_images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = height_images; sourceTree = "<group>"; };
 		A1212D68248551C0000E9453 /* Xitu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Xitu-Bridging-Header.h"; sourceTree = "<group>"; };
 		A1212D6D24855237000E9453 /* MJRefresh+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MJRefresh+Rx.swift"; sourceTree = "<group>"; };
 		A1212D6F2485534C000E9453 /* CGRect+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Ext.swift"; sourceTree = "<group>"; };
@@ -48,6 +44,8 @@
 		A14618562485307A001F25CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A146185E24853BB9001F25CB /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		A1BBA04C2485DFED00C3AC56 /* XTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XTCell.swift; sourceTree = "<group>"; };
+		A1BBA04F2485E80E00C3AC56 /* UserActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActivityModel.swift; sourceTree = "<group>"; };
+		A1BBA0512485E9C900C3AC56 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		C325007EEE65D4E6A1247AB0 /* Pods-Xitu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xitu.release.xcconfig"; path = "Target Support Files/Pods-Xitu/Pods-Xitu.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,9 +81,6 @@
 		A1212D5F24854E96000E9453 /* LocalSource */ = {
 			isa = PBXGroup;
 			children = (
-				A1212D6624854EE1000E9453 /* height_images */,
-				A1212D6424854EDA000E9453 /* low_images */,
-				A1212D6224854ED5000E9453 /* avatars */,
 				A1212D6024854ECF000E9453 /* local.json */,
 			);
 			path = LocalSource;
@@ -120,6 +115,7 @@
 		A1212D7B248556B0000E9453 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A1BBA04F2485E80E00C3AC56 /* UserActivityModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				A146185E24853BB9001F25CB /* Fonts.swift */,
+				A1BBA0512485E9C900C3AC56 /* Colors.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -249,13 +246,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1212D6324854ED5000E9453 /* avatars in Resources */,
-				A1212D6724854EE1000E9453 /* height_images in Resources */,
 				A14618552485307A001F25CB /* LaunchScreen.storyboard in Resources */,
 				A1212D6124854ECF000E9453 /* local.json in Resources */,
 				A14618522485307A001F25CB /* Assets.xcassets in Resources */,
 				A146185024853078001F25CB /* Main.storyboard in Resources */,
-				A1212D6524854EDA000E9453 /* low_images in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +320,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1212D6E24855237000E9453 /* MJRefresh+Rx.swift in Sources */,
+				A1BBA0522485E9C900C3AC56 /* Colors.swift in Sources */,
+				A1BBA0502485E80E00C3AC56 /* UserActivityModel.swift in Sources */,
 				A1212D792485565E000E9453 /* UIColor+Hex.swift in Sources */,
 				A146184D24853078001F25CB /* ViewController.swift in Sources */,
 				A1212D7224855376000E9453 /* UIView+CornerPath.swift in Sources */,
