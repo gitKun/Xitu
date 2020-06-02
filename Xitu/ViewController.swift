@@ -79,7 +79,9 @@ extension ViewController {
       })
       .disposed(by: disposeBag)
     // 刷新状态管理
-    viewModel.inputs.refreshStatusBind(to: self.tableView).disposed(by: disposeBag)
+    viewModel.outputs
+      .refreshStatusBind(to: self.tableView)
+      .disposed(by: disposeBag)
     let dataSource = self.tableViewCellDataSourc
     // 获取数据
     self.viewModel.outputs.dataSource

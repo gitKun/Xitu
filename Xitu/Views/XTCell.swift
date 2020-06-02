@@ -71,7 +71,7 @@ private extension XTCell {
       var result = job
       result += (result.isEmpty || company.isEmpty) ? company : " @ " + company
       let time = (time as NSString).substring(with: NSRange(location: 5, length: 5))
-      result +=  result.isEmpty ? time : " • " + time
+      result +=  result.isEmpty ? time : "•" + time
       return result
     }()
     userInfoLabel.text = userInfo

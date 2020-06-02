@@ -18,7 +18,7 @@ import RxDataSources
  *
  */
 
-protocol XTRecommendViemModelInputs: Refreshable {
+protocol XTRecommendViemModelInputs {
 
   /// 加载数据
   /// - Parameter isRefreshing: 是否为刷新,**true**就加入到头部,**false**加入尾部
@@ -27,7 +27,7 @@ protocol XTRecommendViemModelInputs: Refreshable {
   func viewDidload()
 }
 
-protocol XTRecommendViemModelOutPuts {
+protocol XTRecommendViemModelOutPuts: Refreshable {
   /// 数据源数组
   var dataSource: Driver<[SectionModel<String, UserActivity>]> { get }
 }
@@ -102,7 +102,7 @@ class XTRecommendViemModel: XTRecommendViemModelType, XTRecommendViemModelInputs
 
 //extension XTRecommendViemModel: Refreshable {}
 
-// MARK: 真实网路请求
+// MARK: - 真实网路请求
 private extension XTRecommendViemModel {
   func queryNewData() -> Driver<[UserActivity]> {
     /*let result = recommendProvider.rx.request(.recommendNew)
@@ -127,7 +127,7 @@ private extension XTRecommendViemModel {
   }
 }
 
-// MARK: 生成指定形式的数据
+// MARK: - 生成指定形式的数据
 private extension XTRecommendViemModel {
   // 加载本地数据
   func readerLoadData() -> [UserActivity] {
@@ -137,7 +137,7 @@ private extension XTRecommendViemModel {
   }
 }
 
-// MARK: 定义数据的转换方式
+// MARK: - 定义数据的转换方式
 private extension XTRecommendViemModel {
   enum EditeDataCommand {
     /// instert 到头部
@@ -148,7 +148,7 @@ private extension XTRecommendViemModel {
 
   /// 内部数据存储的数据结构
   struct RecommendWrappedModel {
-    fileprivate var items: [UserActivity]
+    var items: [UserActivity]
     init(items: [UserActivity] = []) {
       self.items = items
     }
@@ -166,5 +166,4 @@ private extension XTRecommendViemModel {
       }
     }
   }
-// The end
 }
