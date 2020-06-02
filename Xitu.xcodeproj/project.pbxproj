@@ -78,14 +78,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		A1212D5F24854E96000E9453 /* LocalSource */ = {
-			isa = PBXGroup;
-			children = (
-				A1212D6024854ECF000E9453 /* local.json */,
-			);
-			path = LocalSource;
-			sourceTree = "<group>";
-		};
 		A1212D6C248551F1000E9453 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +138,7 @@
 				A14618562485307A001F25CB /* Info.plist */,
 				A14618532485307A001F25CB /* LaunchScreen.storyboard */,
 				A146184824853078001F25CB /* AppDelegate.swift */,
+				A1212D6024854ECF000E9453 /* local.json */,
 				A14618512485307A001F25CB /* Assets.xcassets */,
 				A146184E24853078001F25CB /* Main.storyboard */,
 				A146184C24853078001F25CB /* ViewController.swift */,
@@ -153,7 +146,6 @@
 				A1BBA04B2485D96F00C3AC56 /* Views */,
 				A1212D7B248556B0000E9453 /* Models */,
 				A1212D75248555E1000E9453 /* CustomViews */,
-				A1212D5F24854E96000E9453 /* LocalSource */,
 			);
 			path = Xitu;
 			sourceTree = "<group>";

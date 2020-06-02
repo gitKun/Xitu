@@ -8,10 +8,13 @@
 
 import Foundation
 
+private struct UserActivityWrapped: Decodable {
+  var userActivity: UserActivity
+}
+
 struct UserActivity: Decodable {
   /// 唯一标识符(掘金iOS使用的是Texture!)
   private var id: String
-  private var action: String
   /// 取第一个
   private var pins: [Pin]
 
@@ -24,7 +27,6 @@ struct UserActivity: Decodable {
     let container = try decoder.container(keyedBy: DecodeKey.self)
     do {
       id = try container.decode(String.self, forKey: .id)
-      action = try container.decode(String.self, forKey: .action)
       pins = try container.decode([Pin].self, forKey: .pins)
       let firstPin = pins[0]
       attributeContent = UserActivity.provideAttribute(content: firstPin.content)
@@ -33,16 +35,18 @@ struct UserActivity: Decodable {
     }
   }
   enum DecodeKey: String, CodingKey {
-    case id, action, pins, attributeContent
+    case id, pins, attributeContent
   }
 }
 
 // MARK: 外部能够调用的方法
 extension UserActivity {
-  static func modelsForm(data: Data) -> [UserActivity] {
+  static func modelFromLocal() -> [UserActivity] {
+    let data = loadMainBundleFile("local.json")
     let decoder = JSONDecoder()
     do {
-     return []
+      let activityArray = try decoder.decode([UserActivityWrapped].self, from: data)
+      return activityArray.map { $0.userActivity }
     } catch {
       fatalError("解析Model失败!error:\n\(error) ____#")
     }
@@ -60,10 +64,6 @@ extension UserActivity {
   /// 用户所发沸点的ID
   var activityID: String {
     return id
-  }
-  /// 暂时无用
-  var avtivityAction: String {
-    return action
   }
   /// 标识符
   var pinID: String {
@@ -212,27 +212,38 @@ struct PictureItem: Decodable {
   //var type: PicType
   var width: CGFloat
   var height: CGFloat
+  /// 本队存储的名称
+  var loaclName: String
   /// 图片浏览界面使用原图
   var url: String
   /// 列表界面使用小图片
   var actUrl: String
-  /// 本队存储的名称
-  var loaclName: String
 
   init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: DecodeKey.self)
     do {
       width = try container.decode(CGFloat.self, forKey: .width)
-      height = try container.decode(CGFloat.self, forKey: .height)
+      height = try container.decode(CGFloat.self, forKey: .heihgt)
       loaclName = try container.decode(String.self, forKey: .loaclName)
-      url = try container.decode(String.self, forKey: .loaclName)
-      actUrl = try container.decode(String.self, forKey: .loaclName)
-      actUrl = "act_" + actUrl
+      url = loaclName
+      actUrl = "act_" + loaclName
     } catch {
       throw error
     }
   }
   enum DecodeKey: String, CodingKey {
-    case width, height, loaclName, url, actUrl
+    case width, heihgt, loaclName
+  }
+}
+
+private func loadMainBundleFile(_ name: String) -> Data {
+  guard let file = Bundle.main.url(forResource: name, withExtension: nil) else {
+      fatalError("Couldn't find \(name) in main bundle.")
+  }
+
+  do {
+     return try Data(contentsOf: file)
+  } catch {
+      fatalError("Coundn't load \(name) from main bundle:\n\(error)")
   }
 }
