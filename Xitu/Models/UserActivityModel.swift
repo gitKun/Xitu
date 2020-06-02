@@ -225,8 +225,8 @@ struct PictureItem: Decodable {
       width = try container.decode(CGFloat.self, forKey: .width)
       height = try container.decode(CGFloat.self, forKey: .heihgt)
       loaclName = try container.decode(String.self, forKey: .loaclName)
-      url = loaclName
-      actUrl = "act_" + loaclName
+      actUrl = loaclName
+      url = "act_" + loaclName
     } catch {
       throw error
     }
