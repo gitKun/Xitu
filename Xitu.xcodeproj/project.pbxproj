@@ -20,6 +20,8 @@
 		A14618522485307A001F25CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A14618512485307A001F25CB /* Assets.xcassets */; };
 		A14618552485307A001F25CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14618532485307A001F25CB /* LaunchScreen.storyboard */; };
 		A146185F24853BB9001F25CB /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A146185E24853BB9001F25CB /* Fonts.swift */; };
+		A18487B22489DFDA005AB4D9 /* TestRoloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18487B12489DFDA005AB4D9 /* TestRoloadViewController.swift */; };
+		A18487B42489E3A9005AB4D9 /* TestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18487B32489E3A9005AB4D9 /* TestCell.swift */; };
 		A1BBA04D2485DFED00C3AC56 /* XTCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BBA04C2485DFED00C3AC56 /* XTCell.swift */; };
 		A1BBA0502485E80E00C3AC56 /* UserActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BBA04F2485E80E00C3AC56 /* UserActivityModel.swift */; };
 		A1BBA0522485E9C900C3AC56 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BBA0512485E9C900C3AC56 /* Colors.swift */; };
@@ -47,6 +49,8 @@
 		A14618542485307A001F25CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A14618562485307A001F25CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A146185E24853BB9001F25CB /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		A18487B12489DFDA005AB4D9 /* TestRoloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRoloadViewController.swift; sourceTree = "<group>"; };
+		A18487B32489E3A9005AB4D9 /* TestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCell.swift; sourceTree = "<group>"; };
 		A1BBA04C2485DFED00C3AC56 /* XTCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XTCell.swift; sourceTree = "<group>"; };
 		A1BBA04F2485E80E00C3AC56 /* UserActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActivityModel.swift; sourceTree = "<group>"; };
 		A1BBA0512485E9C900C3AC56 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -152,6 +156,8 @@
 				A1BBA05924860BC100C3AC56 /* act_activity_pin_4.gif */,
 				A14618512485307A001F25CB /* Assets.xcassets */,
 				A146184E24853078001F25CB /* Main.storyboard */,
+				A18487B32489E3A9005AB4D9 /* TestCell.swift */,
+				A18487B12489DFDA005AB4D9 /* TestRoloadViewController.swift */,
 				A146184C24853078001F25CB /* ViewController.swift */,
 				A1212D7A248556A1000E9453 /* ViewModels */,
 				A1BBA04B2485D96F00C3AC56 /* Views */,
@@ -332,12 +338,14 @@
 				A146184D24853078001F25CB /* ViewController.swift in Sources */,
 				A1212D7224855376000E9453 /* UIView+CornerPath.swift in Sources */,
 				A146185F24853BB9001F25CB /* Fonts.swift in Sources */,
+				A18487B42489E3A9005AB4D9 /* TestCell.swift in Sources */,
 				A1BBA04D2485DFED00C3AC56 /* XTCell.swift in Sources */,
 				A146184924853078001F25CB /* AppDelegate.swift in Sources */,
 				A1BBA0562486091000C3AC56 /* XTImageContentView.swift in Sources */,
 				A1212D772485563E000E9453 /* CornerBorderButton.swift in Sources */,
 				A1212D702485534C000E9453 /* CGRect+Ext.swift in Sources */,
 				A1BBA0542485F5B700C3AC56 /* XTRecommendViemModel.swift in Sources */,
+				A18487B22489DFDA005AB4D9 /* TestRoloadViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
